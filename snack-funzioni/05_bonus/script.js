@@ -9,9 +9,17 @@ const name = 'Mario';
 
 
 // Dichiara la funzione qui.
-
+const salutoCustom = (nome) => {
+    const now = new Date();
+    const hour = now.getHours();
+    if (hour >= 0 && hour < 13) return ('Buongiorno ', nome);
+    else if (hour >= 13 && hour < 17) return ('Buon pomeriggio ', nome);
+    else return ('Buonasera ', nome);    
+} 
 
 // Invoca la funzione qui e stampa il risultato in console
+
+console.log(salutoCustom(name));
 
 
 
